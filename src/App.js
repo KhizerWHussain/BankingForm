@@ -7,7 +7,6 @@ import Scrutiny from "./Components/Scrutiny";
 function App() {
   return (
     <Fragment>
-      {/* <Banking /> */}
       <Router>
         <Routes>
           <Route path="/" element={<Banking />} />
@@ -15,7 +14,6 @@ function App() {
           <Route path="/scrutiny" element={<Scrutiny />} />
         </Routes>
       </Router>
-
     </Fragment>
   );
 }
