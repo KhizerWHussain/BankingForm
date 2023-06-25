@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import { Fragment } from "react";
+import Banking from "./Components/Banking";
+import { Routes, BrowserRouter as Router, Route } from "react-router-dom";
+import CustomerInfo from "./Components/CustomerInfo";
+import Scrutiny from "./Components/Scrutiny";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      {/* <Banking /> */}
+      <Router>
+        <Routes>
+          <Route path="/" element={<Banking />} />
+          <Route path="/customerinfo" element={<CustomerInfo />} />
+          <Route path="/scrutiny" element={<Scrutiny />} />
+        </Routes>
+      </Router>
+
+    </Fragment>
   );
 }
 
